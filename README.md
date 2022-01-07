@@ -1,4 +1,4 @@
-# Victor-Su-Website
+# Personal Website
 
 Check out my website on my custom domain!: http://victor-su.rf.gd/
 
