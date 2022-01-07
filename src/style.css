@@ -1,0 +1,540 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    margin:0;
+}
+ul{
+    margin:0;
+}
+.nav ul li{
+    display:inline-block;
+    margin-right: 60px;
+}
+li,a{
+    color: grey;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    list-style: none;
+    text-decoration: none;
+}
+.navbar {
+    position: fixed;
+    background: white;
+    width: 100%;
+    height: 90px;
+    border-bottom: 2px solid #e9ecef;
+    z-index: 1000;
+}
+
+.navbar-links {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    animation-duration: 1.5s;
+    animation-name:slidein;
+}
+@keyframes slidein {
+    from{
+    margin-left: 100%;
+    width: 300%;
+    }
+    to{
+    margin-left: 0%;
+    width: 100%;
+    }
+}
+@keyframes slideout{
+    from{
+    margin-left: 0%;
+    width: 100%;
+    }
+    to{
+    margin-left: 100%;
+    width: 300%;
+    }
+}
+.navbar-links ul {
+    display: flex;
+    justify-content: end;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: grey;
+    margin-right: 30px;
+    padding: 0.75rem;
+}
+.toggle-button {
+    position: fixed;
+    top: 0.75rem;
+    right: 0.5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 17px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: grey;
+    border-radius: 10px;
+}
+@media (max-width: 900px) {
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            height: 55px;
+        }
+    
+        .toggle-button {
+            display: flex;
+            cursor: pointer;
+        }
+    
+        .navbar-links {
+            display: none;
+            width: 100%;
+        }
+    
+        .navbar-links ul {
+            width: 100%;
+            flex-direction: column;
+        }
+    
+        .navbar-links ul li {
+            text-align: end;
+            height: 75px;
+        }
+    
+        .navbar-links ul li a {
+            padding: .5rem 1rem;
+        }
+    
+        .navbar-links.active {
+            display: flex;
+            background:white;
+            position: fixed;
+            height: 450px;
+            width: 100%;
+            margin-top: 55px;
+            border-bottom: 2px solid #e9ecef;
+            cursor:pointer;
+        }
+}
+.container {
+    position:relative;
+  }
+.background-pic{
+    width: 100%;
+    height: auto;
+}
+@media(max-width: 1250px){
+    .background-pic{
+        height: 750px;
+    }
+}
+.aboutme{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.profile{
+   width: 377px;
+   height: 464px;
+   border: 5px solid rgb(48, 47, 47);
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 110px;
+    white-space: nowrap;
+  }
+.under{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    white-space: nowrap;
+    margin-top: 60px;
+  }
+.paragraph{
+    width: 500px;
+}
+@media(max-width: 510px){
+    .paragraph{
+        width: 375px;
+    }
+}
+#aboutmeHeader{
+    color: rgb(18, 67, 158);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+@media(max-width: 893px){
+    #aboutmeHeader{
+        text-align: center;
+    }
+}
+#aboutDescription{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 2;
+    color: rgb(94, 87, 87);
+    text-align: left;
+}
+.aboutmesection, .resumeSection, .projectSection, .photoSection, .commentSection{
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.resume{
+    display: flex;
+    justify-content: center;
+}
+.resumeimg{
+    width: 50%;
+    height: auto;
+    border: 2px solid rgb(48, 47, 47);
+    transition: transform 0.25s ease;
+}
+@media(max-width:1000px){
+    .resumeimg{
+        width: 80%;
+        height: auto;
+    }
+}
+.resumeimg:hover {
+    -webkit-transform:scale(1.5); 
+    transform:scale(1.5);
+}
+.headerPdf{
+    text-align: center;
+}
+.projects{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.animeWebsite, .personalWebsite, .ChatApp{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 500px;
+    text-align: center;
+    margin-top: 30px;
+}
+@media(max-width: 510px) {
+    .animeWebsite, .personalWebsite{
+        width: 450px;
+    }
+}
+#animeWebsiteHeader, #personalWebsiteHeader, #ChatAppHeader{
+    color: rgb(18, 67, 158);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px; 
+    text-align: center;   
+}
+#projectHeader, #photoHeader, #resumeHeader, #commentHeader{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(18, 67, 158);
+}
+.projects{
+    margin-top: 75px;
+}
+#projectDescription{
+    text-align: center;
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 2;
+    color: rgb(94, 87, 87);
+    font-size:16.5px;
+}
+h5:hover{
+   color: rgb(18, 67, 158);
+   transition:.4s;
+}
+#killua{
+    border: 5px solid rgb(48, 47, 47);
+}
+#website{
+    border: 5px solid rgb(48, 47, 47);
+    height:236px;
+    width:236px;
+}
+#ChatAppPic{
+    border: 5px solid rgb(48, 47, 47);
+    height:236px;
+    width:236px;
+}
+#photoDescription{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.photoSlider{
+    width: 1200px;
+    margin: auto;
+    position: relative;
+}
+@media(max-width: 1200px){
+    .photoSlider{
+        width: 800px;
+    }
+}
+@media(max-width: 800px){
+    .photoSlider{
+        width: 600px;
+    }
+}
+@media(max-width: 600px){
+    .photoSlider{
+        width: 350px;
+    }
+}
+.carousel{
+    display:none;
+    border: 5px solid black;
+}
+
+@media only screen and (max-width: 768px){
+    .centered{
+        font-size: 55px;
+    }
+    .under{
+        font-size: 15px;
+    }
+}
+#prev{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    color:white;
+    opacity: 0.8;
+    font-size: 30px;
+    cursor: pointer;
+}
+#next{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    color:white;
+    opacity: 0.8;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#next:hover{
+    opacity: 1.3;
+}
+#prev:hover{
+    opacity: 1.3;
+}
+.fade{
+    animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+#linked, #insta, #face, #email{
+    color:rgb(102, 92, 92);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+#contact{
+    height: 275px;
+    width: 100%;
+}
+#contactHeader{
+    text-align: center;
+    font-family:  Arial, Helvetica, sans-serif;
+    color:  rgb(18, 67, 158);
+}
+.headerLine{
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 100%;
+}
+hr{
+    height:5px;
+    background: rgb(18, 67, 158);
+    width: 100%;
+}
+.mainContainer{
+    display:flex;
+    flex-wrap:wrap;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    justify-content: center;
+}
+#mailIcon, #instaIcon, #facebookIcon, #linkedinIcon{
+    color: rgb(102, 92, 92);
+    font-size: 25px;
+    margin-right: 25px;
+    position: relative;
+}
+#facebook, #linkedin, #instagram, #uwEmail{
+    display:flex;
+    width: 375px;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(102, 92, 92);
+}
+#end{
+    text-align: center;
+    color:  rgb(102, 92, 92);
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    white-space: nowrap;
+}
+@media only screen and (max-width: 1000px){
+    .mainContainer{
+        width: 500px;
+    }
+    #contact{
+        height: 355px;
+    }
+}
+@media only screen and (max-width: 500px){
+    .mainContainer{
+        width: 300px;
+    }
+    #contact{
+        height: 360px;
+    }
+}
+
+#face:hover{
+    color:  grey;
+    transition: .4s ;
+}
+#insta:hover{
+    color:  grey;
+    transition: .4s ;
+}
+#linked:hover{
+    color:  grey;
+    transition: .4s ;
+}
+#email:hover{
+    color:  grey;
+    transition: .4s ;
+}
+#mailIcon:hover{
+    color:  grey;
+    transition: .4s ;
+
+}
+#instaIcon:hover{
+    color:  grey;
+    transition: .4s ;
+
+}
+#facebookIcon:hover{
+    color:  grey;
+    transition: .4s ;
+
+}
+#linkedinIcon:hover{
+    color:  grey;
+    transition: .4s ;
+}
+
+textarea{
+    width: 400px;
+    height: 80px;
+    background-color: #fff;
+    resize:none;
+    border: 2px solid rgb(94, 87, 87);
+}
+@media only screen and (max-width: 400px){
+    textarea{
+        width: 200px;
+        height: 40px;
+    }
+}
+button{
+    width: 100px;
+    height: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    background-color: rgb(39, 87, 177);
+    color:white;
+    text-align: center;
+    transition: 0.3s;
+    opacity: 0.8;
+    cursor:pointer;
+    margin-bottom: 60px;
+}
+button:hover{
+    opacity:1;
+
+}
+.commentContainer{
+    display:flex;
+    justify-content: center;
+}
+#commentCaption{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.commentBox{
+    padding: 20px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    border:2px solid #d2d5d8;
+    width: 800px;
+}
+@media only screen and (max-width: 800px){
+    .commentBox{
+        width: 400px;
+    }
+    .commentBox p{
+        font-size: 10px;
+    }
+}
+.commentBox p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgb(94, 87, 87);
+
+}
+#title{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: rgb(94, 87, 87);
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+
+}
+.commentBoxContainer{
+    display:flex;
+    justify-content: center;
+}
