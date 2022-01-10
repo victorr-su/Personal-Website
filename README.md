@@ -13,4 +13,4 @@ Check out my website on my custom domain!: http://victor-su.rf.gd/
 
 ## What technologies did I use to create this?
 - For the front-end, the project is made up of HTML, CSS, JavaScript and Fontawesome (for icons).
-- For the back-end, I used PHP and MySQL to store GET/PUSH data for the comment section
+- For the back-end, I used PHP and MySQL to manage POST/GET requests for the coments
