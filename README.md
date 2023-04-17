@@ -1,7 +1,5 @@
 # Personal Website
 
-Check out my website on my custom domain!: http://victor-su.rf.gd/
-
 
 ## What is this?
 - This is a personal website/portfolio about me, showcasing who I am and the skills I have. It also allows you to get to know a bit about me! 
